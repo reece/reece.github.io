@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Updating Ensembl 61 with dbSNP statusReece Hart</title>
+
+    <link rel="stylesheet" href="../theme/css/main.css">
+    <link rel="stylesheet" href="../theme/css/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div><img src="http://www.gravatar.com/avatar/3281d23a27e972b08dc636a218375511?s=120&d=http%3A%2F%2Fwww.example.com%2Fdefault.jpg" class="grv-img"/></div>
+        <div class="title"><a href="../">Reece Hart </a></div>
+        <div class="sub-title"></div>
+
+<p>
+  <div class="view"><a href="../archives.html">Archives</a></div>
+</p>
+
+<!-- Social links -->
+<div class="social">
+<!-- h4>Follow Me</h4 -->
+<ul>
+    <li><a href="https://bitbucket.org/reece">BitBucket</a></li>
+    <li><a href="https://www.facebook.com/reece.k.hart">Facebook</a></li>
+    <li><a href="https://github.com/reece">GitHub</a></li>
+    <li><a href="https://plus.google.com/+ReeceHart">Google Plus</a></li>
+    <li><a href="https://linkedin.com/in/reece">LinkedIn</a></li>
+    <li><a href="http://stackoverflow.com/users/342839/reece">Stack Overflow</a></li>
+    <li><a href="https://twitter.com/reecehart">Twitter</a></li>
+</ul>
+</div>
+
+      </header>
+      <section>
+<section id="content" class="body">
+  <article>
+      <div class="article-title">
+        Updating Ensembl 61 with dbSNP status
+      </div>
+
+    <div class="entry-content">
+<p>
+<small>
+  <abbr class="published" title="2011-08-13T05:11:00-07:00">2011-08-13</abbr> 
+  
+
+
+  <a href="../drafts/378.html" rel="bookmark">permalink</a>
+</small>
+</p>      <p>I've been using Ensembl recently to analyze and curate genomic
+variants.&nbsp;Unfortunately, the validation status information from dbSNP,
+the most common variant source, was not available in time for inclusion
+into the most recent Ensembl release (v 61, Feb 2011). This short post
+shows you how to update
+the﻿&nbsp;homo_sapiens_variation_61_37f.﻿variation_feature table.</p>
+<p>Kudos to the Ensembl folks who duly noted the omission on their <a class="reference external" href="http://uswest.ensembl.org/info/docs/knownbugs.html">Known
+Data Bugs</a> page:</p>
+<blockquote>
+<p class="rubric" id="missing-snp-status-human">Missing SNP status (Human)</p>
+<p class="rubric" id="in-release-61">In release: 61</p>
+<p>We are missing information about validation status for most human
+variations due to this data being unavailable from dbSNP at the time
+of import. The validation status for each rsId (exported from dbSNP
+on 2011-01-20) is available via FTP as a&nbsp;<a class="reference external" href="ftp://ftp.ebi.ac.uk/pub/software/ensembl/snp/human/e61_rsid_validation_status.txt.gz">tab-separated
+file</a>.</p>
+</blockquote>
+<p>* Download the file above</p>
+<p>wget -P /tmp -nd
+<a class="reference external" href="ftp://ftp.ebi.ac.uk/pub/software/ensembl/snp/human/e61_rsid_validation_status.txt.gz">ftp://ftp.ebi.ac.uk/pub/software/ensembl/snp/human/e61_rsid_validation_status.txt.gz</a></p>
+<p>gunzip /tmp/e61_rsid_validation_status.txt.gz</p>
+<p>﻿ftp.ebi.ac.uk/pub/software/ensembl/snp/human/e61_rsid_validation_status.txt</p>
+<p>* load the data</p>
+<p>create table e61_rsid_validation_status (rs text, status text);</p>
+<p>LOAD DATA INFILE
+'/srv/mirrors/ftp.ebi.ac.uk/pub/software/ensembl/snp/human/e61_rsid_validation_status.txt'
+into table e61_rsid_validation_status</p>
+<p>N.B. errors: perms, sudo aa-complain /usr/sbin/mysqld</p>
+<p>* issue the update</p>
+<p>update homo_sapiens_variation_61_37f.variation_feature v,
+e61_rsid_validation_status s set validation_status=status where
+v.variation_name=s.rs;</p>
+<p>ugh. that's s-l-o-w. For reasons beyond my MySQL ken, this works better:</p>
+<p>﻿mysql&gt; update variation,(select * from
+reece.e61_rsid_validation_status limit 1000000 offset 0) X set
+validation_status=X.status where variation.validation_status is NULL
+and variation.name=X.rs;Query OK, 818800 rows affected (1 min 18.71
+sec)Rows matched: 818800 &nbsp;Changed: 818800 &nbsp;Warnings: 0</p>
+
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="reecehart">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    </div><!-- /.entry-content -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//reecehart.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//reecehart.disqus.com/count.js" async></script>
+
+  </article>
+</section>
+      </section>
+      <footer>
+        <p><small>
+	  &copy; 2016 Reece Hart
+	  <br/><a href="https://creativecommons.org/licenses/by/4.0/"><img width="65px" src="../theme/images/cc-by.svg"/></a>
+	  <br/><a href="https://github.com/reece/pelican-reece">Theme Info</a>
+	</small></p>
+      </footer>
+    </div>
+    <!-- Scale fix -->
+    <script>
+      var metas = document.getElementsByTagName('meta');
+      var i;
+      
+      if (navigator.userAgent.match(/iPhone/i)) {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+          }
+        }
+      
+        document.addEventListener("gesturestart", gestureStart, false);
+      }
+
+      function gestureStart() {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
