@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Reece Hart</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2013-06-02T16:23:00-07:00</updated><entry><title>Using namedtuples with method and instance variable inheritance</title><link href="/posts/2013/06/using-namedtuples-with-method-and-instance-variable-inheritance.html" rel="alternate"></link><published>2013-06-02T16:23:00-07:00</published><updated>2013-06-02T16:23:00-07:00</updated><author><name>reece</name></author><id>tag:None,2013-06-02:/posts/2013/06/using-namedtuples-with-method-and-instance-variable-inheritance.html</id><summary type="html">&lt;p&gt;Python's namedtuple class provides a simple, lightweight way to make
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Reece's Blog</title><link href="reece.github.io/" rel="alternate"></link><link href="reece.github.io/feeds/all.atom.xml" rel="self"></link><id>reece.github.io/</id><updated>2013-06-02T16:23:00-07:00</updated><entry><title>Using namedtuples with method and instance variable inheritance</title><link href="reece.github.io/posts/2013/06/using-namedtuples-with-method-and-instance-variable-inheritance.html" rel="alternate"></link><published>2013-06-02T16:23:00-07:00</published><updated>2013-06-02T16:23:00-07:00</updated><author><name>reece</name></author><id>tag:None,2013-06-02:reece.github.io/posts/2013/06/using-namedtuples-with-method-and-instance-variable-inheritance.html</id><summary type="html">&lt;p&gt;Python's namedtuple class provides a simple, lightweight way to make
 simple immutable classes. If you're using dictionaries to pass objects
 around, consider using namedtuples instead: they're easier to read and
 provide the benefits of classes such as methods and properties. With
@@ -121,7 +121,7 @@ Point2D is dubious. If I were going to implement this, I'd probably
 start with a generic n-dimensional point that had the methods described
 above, and then subclass special cases like Point2D and Point3D as
 needed.&lt;/p&gt;
-</content></entry><entry><title>Highlighting the active tab in GNOME terminal</title><link href="/posts/2013/02/highlighting-the-active-tab-in-gnome-terminal.html" rel="alternate"></link><published>2013-02-26T21:41:00-08:00</published><updated>2013-02-26T21:41:00-08:00</updated><author><name>reece</name></author><id>tag:None,2013-02-26:/posts/2013/02/highlighting-the-active-tab-in-gnome-terminal.html</id><summary type="html">&lt;p&gt;In recent iterations of GNOME terminal, the active tab is nearly
+</content></entry><entry><title>Highlighting the active tab in GNOME terminal</title><link href="reece.github.io/posts/2013/02/highlighting-the-active-tab-in-gnome-terminal.html" rel="alternate"></link><published>2013-02-26T21:41:00-08:00</published><updated>2013-02-26T21:41:00-08:00</updated><author><name>reece</name></author><id>tag:None,2013-02-26:reece.github.io/posts/2013/02/highlighting-the-active-tab-in-gnome-terminal.html</id><summary type="html">&lt;p&gt;In recent iterations of GNOME terminal, the active tab is nearly
 indistinguishable from the inactive ones.&amp;nbsp;&amp;nbsp;That makes it harder to
 navigate when you've got a bunch of terminals open simultaneously.
 Fortunately,&amp;nbsp;GNOME uses a modified CSS scheme to control theme
@@ -143,7 +143,7 @@ TerminalWindow .notebook tab:active {
 &lt;p&gt;Then, exit all open terminals, and then open a new terminal and create a
 tab. With the above modification, you should see tabs like this:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://harts.net/reece/wp-content/uploads/2013/02/Selection_321.png"&gt;&lt;img alt="GNOME terminal tabs" class="aligncenter wp-image-476" src="http://harts.net/reece/wp-content/uploads/2013/02/Selection_321.png" style="width: 599px; height: 64px;" /&gt;&lt;/a&gt;&lt;/p&gt;
-</content><category term="gnome"></category><category term="ubuntu"></category></entry><entry><title>Using virtualenv, pip, and ipython</title><link href="/posts/2011/07/using-virtualenv-pip-and-ipython.html" rel="alternate"></link><published>2011-07-03T21:06:00-07:00</published><updated>2011-07-03T21:06:00-07:00</updated><author><name>reece</name></author><id>tag:None,2011-07-03:/posts/2011/07/using-virtualenv-pip-and-ipython.html</id><summary type="html">&lt;p&gt;This page provides a quick synopsis on how to use three of my favorite
+</content><category term="gnome"></category><category term="ubuntu"></category></entry><entry><title>Using virtualenv, pip, and ipython</title><link href="reece.github.io/posts/2011/07/using-virtualenv-pip-and-ipython.html" rel="alternate"></link><published>2011-07-03T21:06:00-07:00</published><updated>2011-07-03T21:06:00-07:00</updated><author><name>reece</name></author><id>tag:None,2011-07-03:reece.github.io/posts/2011/07/using-virtualenv-pip-and-ipython.html</id><summary type="html">&lt;p&gt;This page provides a quick synopsis on how to use three of my favorite
 Python features together:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.virtualenv.org/"&gt;virtualenv&lt;/a&gt;, which provides a
@@ -257,7 +257,7 @@ if such exists.)&lt;/div&gt;
 installed&amp;nbsp;without affecting other virtualenvs, your system libraries, or
 other users. Furthermore, this can be accomplished without special
 permissions in a user's directory.&lt;/p&gt;
-</content></entry><entry><title>Bolloxed sharing in Google docs</title><link href="/posts/2011/04/bolloxed-sharing-in-google-docs.html" rel="alternate"></link><published>2011-04-16T09:44:00-07:00</published><updated>2011-04-16T09:44:00-07:00</updated><author><name>reece</name></author><id>tag:None,2011-04-16:/posts/2011/04/bolloxed-sharing-in-google-docs.html</id><summary type="html">&lt;p&gt;Google's implementation of document sharing is completely fouled up. The
+</content></entry><entry><title>Bolloxed sharing in Google docs</title><link href="reece.github.io/posts/2011/04/bolloxed-sharing-in-google-docs.html" rel="alternate"></link><published>2011-04-16T09:44:00-07:00</published><updated>2011-04-16T09:44:00-07:00</updated><author><name>reece</name></author><id>tag:None,2011-04-16:reece.github.io/posts/2011/04/bolloxed-sharing-in-google-docs.html</id><summary type="html">&lt;p&gt;Google's implementation of document sharing is completely fouled up. The
 following is a slighted redacted version of a (formerly) internal email
 to colleagues to tell them what I learned about document sharing based
 on interactions with their customer support and folks on the net.&lt;/p&gt;
@@ -294,7 +294,7 @@ if you haven't accessed the document before.&amp;nbsp;The problem, of course, is
 that you'll have to guess at keywords for a document whose content you
 haven't seen yet. Sigh.&lt;/p&gt;
 &lt;p&gt;-Reece&lt;/p&gt;
-</content></entry><entry><title>Where is our (Hello) World going?!</title><link href="/posts/2011/02/where-is-our-hello-world-going.html" rel="alternate"></link><published>2011-02-15T14:13:00-08:00</published><updated>2011-02-15T14:13:00-08:00</updated><author><name>reece</name></author><id>tag:None,2011-02-15:/posts/2011/02/where-is-our-hello-world-going.html</id><summary type="html">&lt;p&gt;Hype and evangelism run rampant in technology. That's not to say there
+</content></entry><entry><title>Where is our (Hello) World going?!</title><link href="reece.github.io/posts/2011/02/where-is-our-hello-world-going.html" rel="alternate"></link><published>2011-02-15T14:13:00-08:00</published><updated>2011-02-15T14:13:00-08:00</updated><author><name>reece</name></author><id>tag:None,2011-02-15:reece.github.io/posts/2011/02/where-is-our-hello-world-going.html</id><summary type="html">&lt;p&gt;Hype and evangelism run rampant in technology. That's not to say there
 aren't real and substantial advances, of course. One of my personal
 mantras is that simple things should be simple and complex should be
 possible. In other words, complexity shouldn't come at the expense
@@ -341,7 +341,7 @@ promulgate or disparage Perl, Python, or Groovy by inclusion above, or
 Java, Ruby, Fortran, Lisp, or anything else by exclusion.&lt;/p&gt;
 &lt;p&gt;Instead, the point was that I was doing some investigation with Groovy
 and was struck by sluggish start-up time.&lt;/p&gt;
-</content></entry><entry><title>Monitor your router with (r)syslogd</title><link href="/posts/2011/02/monitor-your-router-with-rsyslogd.html" rel="alternate"></link><published>2011-02-12T21:19:00-08:00</published><updated>2011-02-12T21:19:00-08:00</updated><author><name>reece</name></author><id>tag:None,2011-02-12:/posts/2011/02/monitor-your-router-with-rsyslogd.html</id><summary type="html">&lt;p&gt;I'm having lots of dropped connections at home.&amp;nbsp;Unfortunately,
+</content></entry><entry><title>Monitor your router with (r)syslogd</title><link href="reece.github.io/posts/2011/02/monitor-your-router-with-rsyslogd.html" rel="alternate"></link><published>2011-02-12T21:19:00-08:00</published><updated>2011-02-12T21:19:00-08:00</updated><author><name>reece</name></author><id>tag:None,2011-02-12:reece.github.io/posts/2011/02/monitor-your-router-with-rsyslogd.html</id><summary type="html">&lt;p&gt;I'm having lots of dropped connections at home.&amp;nbsp;Unfortunately,
 consumer-grade routers typically have poor monitoring facilities out of
 the box.&amp;nbsp;Unix/Linux environments have long been able to aggregate
 logging messages across multiple hosts through a service called syslog.
@@ -399,7 +399,7 @@ in lease/offered table&lt;/div&gt;
 192.168.0.104&lt;/div&gt;
 &lt;div class="line"&gt;[/text]&lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title>A Roundup of Investigations into Direct-to-Consumer Genetic Testing</title><link href="/posts/2010/07/a-roundup-of-investigations-into-direct-to-consumer-genetic-testing.html" rel="alternate"></link><published>2010-07-24T12:24:00-07:00</published><updated>2010-07-24T12:24:00-07:00</updated><author><name>reece</name></author><id>tag:None,2010-07-24:/posts/2010/07/a-roundup-of-investigations-into-direct-to-consumer-genetic-testing.html</id><summary type="html">&lt;p&gt;Earlier this week, the Oversight and Investigation subcommittee of the
+</content></entry><entry><title>A Roundup of Investigations into Direct-to-Consumer Genetic Testing</title><link href="reece.github.io/posts/2010/07/a-roundup-of-investigations-into-direct-to-consumer-genetic-testing.html" rel="alternate"></link><published>2010-07-24T12:24:00-07:00</published><updated>2010-07-24T12:24:00-07:00</updated><author><name>reece</name></author><id>tag:None,2010-07-24:reece.github.io/posts/2010/07/a-roundup-of-investigations-into-direct-to-consumer-genetic-testing.html</id><summary type="html">&lt;p&gt;Earlier this week, the Oversight and Investigation subcommittee of the
 Energy and Commerce committee of the US House of Representatives
 undertook an investigation of direct-to-consumer (DTC) testing. To some,
 this investigation was long overdue; to others, it was a witch hunt by
@@ -503,7 +503,7 @@ Sites Mislead Consumers&lt;/a&gt;.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt&gt;
 &lt;/dt&gt;
-&lt;/dl&gt;</content></entry><entry><title>Relocating a primary site directory</title><link href="/posts/2010/03/relocating-a-primary-site-directory.html" rel="alternate"></link><published>2010-03-04T12:22:00-08:00</published><updated>2010-03-04T12:22:00-08:00</updated><author><name>reece</name></author><id>tag:None,2010-03-04:/posts/2010/03/relocating-a-primary-site-directory.html</id><summary type="html">&lt;p&gt;My hosting provider,&amp;nbsp;&lt;a class="reference external" href="http://hostmonster.com"&gt;HostMonster&lt;/a&gt;,
+&lt;/dl&gt;</content><category term="Genetics"></category></entry><entry><title>Relocating a primary site directory</title><link href="reece.github.io/posts/2010/03/relocating-a-primary-site-directory.html" rel="alternate"></link><published>2010-03-04T12:22:00-08:00</published><updated>2010-03-04T12:22:00-08:00</updated><author><name>reece</name></author><id>tag:None,2010-03-04:reece.github.io/posts/2010/03/relocating-a-primary-site-directory.html</id><summary type="html">&lt;p&gt;My hosting provider,&amp;nbsp;&lt;a class="reference external" href="http://hostmonster.com"&gt;HostMonster&lt;/a&gt;,
 uses&amp;nbsp;&lt;a class="reference external" href="http://www.cpanel.net/"&gt;cPanel&lt;/a&gt; to enable account
 administrators to configure their domains and services. By default,
 Hostmonster and cPanel place web data for the primary domain in
@@ -583,7 +583,7 @@ without that, simplescripts will be unable to manage domain
 installations. (SimpleScripts is a terrific tool that greatly
 facilitates installing and upgrading many common blogging, CMS, forum,
 wiki, commerce, and customer service tools.)&lt;/p&gt;
-</content></entry><entry><title>Have Monkeys, Need Climbing Wall</title><link href="/posts/2010/01/have-monkeys-need-climbing-wall.html" rel="alternate"></link><published>2010-01-27T00:00:00-08:00</published><updated>2010-01-27T00:00:00-08:00</updated><author><name>reece</name></author><id>tag:None,2010-01-27:/posts/2010/01/have-monkeys-need-climbing-wall.html</id><summary type="html">&lt;img alt="" class="align-left" src="http://www.harts.net/reece/wp-content/uploads/2009/11/blue-hold-141x150.jpg" /&gt;
+</content></entry><entry><title>Have Monkeys, Need Climbing Wall</title><link href="reece.github.io/posts/2010/01/have-monkeys-need-climbing-wall.html" rel="alternate"></link><published>2010-01-27T00:00:00-08:00</published><updated>2010-01-27T00:00:00-08:00</updated><author><name>reece</name></author><id>tag:None,2010-01-27:reece.github.io/posts/2010/01/have-monkeys-need-climbing-wall.html</id><summary type="html">&lt;img alt="" class="align-left" src="http://www.harts.net/reece/wp-content/uploads/2009/11/blue-hold-141x150.jpg" /&gt;
 &lt;p&gt;I have three kids. All of them like to climb. Margot seems unnaturally
 compelled to climb things -- no matter how imprudent. (She broke her
 clavicle at age 2 after climbing up to, and falling off of, the
@@ -600,7 +600,7 @@ house. The kids love it and it was a hit at our recent holiday cookie
 party.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://goo.gl/photos/8YH9m2A88wtySLov8"&gt;Here are a few pictures&lt;/a&gt; of
 the final product.&lt;/p&gt;
-</content></entry><entry><title>I Joined Berkeley</title><link href="/posts/2010/01/i-joined-berkeley.html" rel="alternate"></link><published>2010-01-25T05:15:00-08:00</published><updated>2010-01-25T05:15:00-08:00</updated><author><name>reece</name></author><id>tag:None,2010-01-25:/posts/2010/01/i-joined-berkeley.html</id><summary type="html">&lt;p&gt;&lt;img alt="Stanley Hall" class="size-medium wp-image-56 alignright" src="http://www.harts.net/reece/wp-content/uploads/2009/12/ph_stanleyhall-300x198.jpg" style="width: 210px; height: 139px;" /&gt;&lt;/p&gt;
+</content></entry><entry><title>I Joined Berkeley</title><link href="reece.github.io/posts/2010/01/i-joined-berkeley.html" rel="alternate"></link><published>2010-01-25T05:15:00-08:00</published><updated>2010-01-25T05:15:00-08:00</updated><author><name>reece</name></author><id>tag:None,2010-01-25:reece.github.io/posts/2010/01/i-joined-berkeley.html</id><summary type="html">&lt;p&gt;&lt;img alt="Stanley Hall" class="size-medium wp-image-56 alignright" src="http://www.harts.net/reece/wp-content/uploads/2009/12/ph_stanleyhall-300x198.jpg" style="width: 210px; height: 139px;" /&gt;&lt;/p&gt;
 &lt;p&gt;As many of you know by now, I left &lt;a class="reference external" href="http://gene.com"&gt;Genentech&lt;/a&gt; in
 September to join UC Berkeley as the &lt;a class="reference external" href="http://genomecommons.org/2009/10/01/reece-hart-joins-as-chief-scientist/"&gt;Chief Scientist of the Genome
 Commons&lt;/a&gt;.
@@ -618,7 +618,7 @@ technical, scientific, clinical, and ethical opportunities associated
 with interpreting genomic data. It's an exciting&amp;nbsp;time and an exciting
 place.&lt;/p&gt;
 &lt;p&gt;To be sure, I'll be posting a lot more about that here.&lt;/p&gt;
-</content></entry><entry><title>Hello, is this thing on?</title><link href="/posts/2010/01/hello-is-this-thing-on.html" rel="alternate"></link><published>2010-01-23T15:02:00-08:00</published><updated>2010-01-23T15:02:00-08:00</updated><author><name>reece</name></author><id>tag:None,2010-01-23:/posts/2010/01/hello-is-this-thing-on.html</id><summary type="html">&lt;p&gt;How is it that someone like me, &lt;em&gt;i.e.&lt;/em&gt; with substantial geek tendencies,
+</content></entry><entry><title>Hello, is this thing on?</title><link href="reece.github.io/posts/2010/01/hello-is-this-thing-on.html" rel="alternate"></link><published>2010-01-23T15:02:00-08:00</published><updated>2010-01-23T15:02:00-08:00</updated><author><name>reece</name></author><id>tag:None,2010-01-23:reece.github.io/posts/2010/01/hello-is-this-thing-on.html</id><summary type="html">&lt;p&gt;How is it that someone like me, &lt;em&gt;i.e.&lt;/em&gt; with substantial geek tendencies,
 goes this long without blogging? At one time, I surely thought that the
 young whippersnappers were wasting their time with this blogging thing.
 I mean, get real, who's gonna read this crap? It turns out lots of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;How is it that someone like me, &lt;em&gt;i.e.&lt;/em&gt; with substantial geek tendencies,
