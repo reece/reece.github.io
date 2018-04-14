@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reece Hart</title>
+    <link>https://reece.github.io/</link>
+    <description>Recent content on Reece Hart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Jun 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://reece.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using namedtuples with method and instance variable inheritance</title>
+      <link>https://reece.github.io/2013/06/02/using-namedtuples-with-method-and-instance-variable-inheritance/</link>
+      <pubDate>Sun, 02 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/2013/06/02/using-namedtuples-with-method-and-instance-variable-inheritance/</guid>
+      <description>Python&amp;rsquo;s namedtuple class provides a simple, lightweight way to make simple immutable classes. If you&amp;rsquo;re using dictionaries to pass objects around, consider using namedtuples instead: they&amp;rsquo;re easier to read and provide the benefits of classes such as methods and properties. With namedtuples, you&amp;rsquo;ll have cleaner code with essentially no additional work.
+The Python namedtuple docs include examples for Point and Point3D. Point3D inherits the instance variables (&amp;ldquo;fields&amp;rdquo; in namedtuples), but not the methods of the Point class.</description>
+    </item>
+    
+    <item>
+      <title>Highlighting the active tab in GNOME terminal</title>
+      <link>https://reece.github.io/2013/02/26/highlighting-the-active-tab-in-gnome-terminal/</link>
+      <pubDate>Tue, 26 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/2013/02/26/highlighting-the-active-tab-in-gnome-terminal/</guid>
+      <description>In recent iterations of GNOME terminal, the active tab is nearly indistinguishable from the inactive ones. That makes it harder to navigate when you&amp;rsquo;ve got a bunch of terminals open simultaneously. Fortunately, GNOME uses a modified CSS scheme to control theme appearance, and that makes it easy to highlight an active tab. Here&amp;rsquo;s how.
+Create (or edit) ~/.config/gtk-3.0/gtk.css. Add these lines:
+@define-color ubuntu_orange #fb9267; TerminalWindow .notebook tab:active { background-color: shade(@ubuntu_orange,1.1); }  Then, exit all open terminals, and then open a new terminal and create a tab.</description>
+    </item>
+    
+    <item>
+      <title>Open Source Licensing</title>
+      <link>https://reece.github.io/drafts/open-source-licensing/</link>
+      <pubDate>Sat, 13 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/drafts/open-source-licensing/</guid>
+      <description>| What I want: | - contributions | - patents
+https://admin.devis.com/rawmedia\_repository/3fc5697d\_4910\_4753\_97d8\_a27ebb2ca4f6
+| http://news.cnet.com/8301-13505\_3-10229817-16.html | http://blogs.zdnet.com/Burnette/?p=192
+| GPL encourages sharing at the expense of audience | Apache is attractive to a larger audience at the expense of ?
+Altruism
+| If you love ideas, set them free. | If you don&amp;rsquo;t get ideas back, strap people down and extract forcibly.</description>
+    </item>
+    
+    <item>
+      <title>Using virtualenv, pip, and ipython</title>
+      <link>https://reece.github.io/2011/07/03/using-virtualenv-pip-and-ipython/</link>
+      <pubDate>Sun, 03 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/2011/07/03/using-virtualenv-pip-and-ipython/</guid>
+      <description>This page provides a quick synopsis on how to use three of my favorite Python features together:
+ virtualenv, which provides a standardized mechanism to isolate python environments (including in WSGI setups) pip &amp;lt;http://www.pip-installer.org/&amp;gt;__, which facilitates packages installation in virtualenv environments or otherwise ipython &amp;lt;http://ipython.scipy.org/&amp;gt;__, a terrific interactive shell with readline and debugging support  First, you&amp;rsquo;ll need python, virtualenv, and ipython installed. These are commonly available in most (all?) Linux distributions, or you can install from source.</description>
+    </item>
+    
+    <item>
+      <title>Bolloxed sharing in Google docs</title>
+      <link>https://reece.github.io/2011/04/16/bolloxed-sharing-in-google-docs/</link>
+      <pubDate>Sat, 16 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/2011/04/16/bolloxed-sharing-in-google-docs/</guid>
+      <description>Google&amp;rsquo;s implementation of document sharing is completely fouled up. The following is a slighted redacted version of a (formerly) internal email to colleagues to tell them what I learned about document sharing based on interactions with their customer support and folks on the net.
+As some of you know, file sharing in Google docs doesn&amp;rsquo;t work the way we expect. I&amp;rsquo;ve exchanged a bunch of emails with Google support about the issue.</description>
+    </item>
+    
+    <item>
+      <title>Monitor your router with (r)syslogd</title>
+      <link>https://reece.github.io/2011/02/12/monitor-your-router-with-rsyslogd/</link>
+      <pubDate>Sat, 12 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/2011/02/12/monitor-your-router-with-rsyslogd/</guid>
+      <description>I&amp;rsquo;m having lots of dropped connections at home. Unfortunately, consumer-grade routers typically have poor monitoring facilities out of the box. Unix/Linux environments have long been able to aggregate logging messages across multiple hosts through a service called syslog. Many routers use embedded Linux and support sending messages to remote systems via syslog. (Emailing logs is supported, but that&amp;rsquo;s a clumsy option.) This post is a short tip on how to configure a D-Link DI-825 (rev B1) to send system messages to an Ubuntu 10.</description>
+    </item>
+    
+    <item>
+      <title>A Roundup of Investigations into Direct-to-Consumer Genetic Testing</title>
+      <link>https://reece.github.io/2010/07/24/a-roundup-of-investigations-into-direct-to-consumer-genetic-testing/</link>
+      <pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/2010/07/24/a-roundup-of-investigations-into-direct-to-consumer-genetic-testing/</guid>
+      <description>Earlier this week, the Oversight and Investigation subcommittee of the Energy and Commerce committee of the US House of Representatives undertook an investigation of direct-to-consumer (DTC) testing. To some, this investigation was long overdue; to others, it was a witch hunt by intrusive regulators. In any case, it&amp;rsquo;s pretty clear that this event will lead to regulatory oversight that will permanently shape genetic testing. Below, I&amp;rsquo;ve provided a few links with comments and highlights.</description>
+    </item>
+    
+    <item>
+      <title>The $5K Mistake</title>
+      <link>https://reece.github.io/2010/06/03/the-5k-mistake/</link>
+      <pubDate>Thu, 03 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/2010/06/03/the-5k-mistake/</guid>
+      <description>Water heaters are the 433rd most boring topic for blogging, but I need serious therapy and this blog entry is it. Unless you&#39;ve already devoured the 432 more interesting topics, consider skipping to the bottom for the lessons, which are probably the only good that will come from this. ![image0](http://harts.net/reece/wp-includes/js/tinymce/plugins/wordpress/img/trans.gif)Ninety minutes ago, I finished one of the least pleasant conversations I&#39;ve had in recent memory by asking a plumber to leave our house and escorting him to the door.</description>
+    </item>
+    
+    <item>
+      <title>Relocating a primary site directory</title>
+      <link>https://reece.github.io/2010/03/04/relocating-a-primary-site-directory/</link>
+      <pubDate>Thu, 04 Mar 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/2010/03/04/relocating-a-primary-site-directory/</guid>
+      <description>My hosting provider, HostMonster, uses cPanel to enable account administrators to configure their domains and services. By default, Hostmonster and cPanel place web data for the primary domain in ~/public_html/, with subdomains and &amp;ldquo;add-on&amp;rdquo; domains as subdirectories therein. That means that files for the primary domain are comingled with the document roots of other domains. The incongruency of that layout causes heartburn for people like me. This post tells you how to relocate those files AND have them served by the original URLs for the primary domain.</description>
+    </item>
+    
+    <item>
+      <title>Have Monkeys, Need Climbing Wall</title>
+      <link>https://reece.github.io/2010/01/27/have-monkeys-need-climbing-wall/</link>
+      <pubDate>Wed, 27 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/2010/01/27/have-monkeys-need-climbing-wall/</guid>
+      <description>I have three kids. All of them like to climb. Margot seems unnaturally compelled to climb things &amp;ndash; no matter how imprudent. (She broke her clavicle at age 2 after climbing up to, and falling off of, the kitchen table.) Unfortunately, our San Francisco postage stamp yard has no good places to climb. Since I spent most of my childhood in a tree, the lack of climbable structures for my kids disturbed me.</description>
+    </item>
+    
+    <item>
+      <title>I Joined Berkeley</title>
+      <link>https://reece.github.io/2010/01/25/i-joined-berkeley/</link>
+      <pubDate>Mon, 25 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/2010/01/25/i-joined-berkeley/</guid>
+      <description>{.size-medium .wp-image-56 .alignright width=&amp;ldquo;210px&amp;rdquo; height=&amp;ldquo;139px&amp;rdquo;}
+As many of you know by now, I left Genentech in September to join UC Berkeley as the Chief Scientist of the Genome Commons. I&amp;rsquo;m part of QB3, the California Institute for Quantitative Biology (no I don&amp;rsquo;t understand the abbreviation either).
+I&amp;rsquo;m collaborating with Steven Brenner, Jasper Rine, and Lior Pachter at Berkeley, and Robert Nussbaum and Bernie Lo at UCSF, to address the technical, scientific, clinical, and ethical opportunities associated with interpreting genomic data.</description>
+    </item>
+    
+    <item>
+      <title>Hello, is this thing on?</title>
+      <link>https://reece.github.io/2010/01/23/hello-is-this-thing-on/</link>
+      <pubDate>Sat, 23 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/2010/01/23/hello-is-this-thing-on/</guid>
+      <description>How is it that someone like me, i.e. with substantial geek tendencies, goes this long without blogging? At one time, I surely thought that the young whippersnappers were wasting their time with this blogging thing. I mean, get real, who&amp;rsquo;s gonna read this crap? It turns out lots of people do.
+The real surprise to me, though, was not that people write and read blogs. The surprise is the community that blogging builds around ideas and projects.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://reece.github.io/drafts/coalesce-for-python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/drafts/coalesce-for-python/</guid>
+      <description>The case of the missing values: SQL&amp;rsquo;s coalesce function for Python  date 2012-01-17 20:11
+ author reece
+ category Computing, Databases, Python
+ slug 471
+ status draft
+  Dealing with potentially missing values is annoying, especially when analyzing sparse data whose structure and completeness is unknown. It&amp;rsquo;s typically impossible to guess which data might be missing. A set of test data might be missing different values that those in another data set, which is to say that you&amp;rsquo;ll succeed on tests and fail in production.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://reece.github.io/drafts/openapi-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/drafts/openapi-notes/</guid>
+      <description> models should be shared by client and server =&amp;gt; one model base (and part of that flow) defined the use cycle/pattern &amp;ndash; it&amp;rsquo;s not linear clarity about what&amp;rsquo;s really supported: xml? better quality models json-schema and json-api  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://reece.github.io/drafts/python-serialization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/drafts/python-serialization/</guid>
+      <description>http://swagger.io/open-source-integrations/
+pyswagger
+bravado
+connexion
+ bravado  connexion petstore doesn&amp;rsquo;t work with bravado http response codes expected to be quoted</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://reece.github.io/drafts/serialization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/drafts/serialization/</guid>
+      <description>protobuf swagger capnproto msgpack
+=&amp;gt; whoa. backup: what do I want?
+figure client, server, models, conceptual models =&amp;gt; code and serializations multi serializations in json, xml, pb, msgpack, etc validation reasonable code
+federated sources NOT single-source! so passe!
+model -&amp;gt; {doc,lang models,db models,wire models} + codegen
+ clear usage modes/models iterative builds
+ swagger
+ no enums
+ annoyance bugs and gap between suggested features and real-world protobuf
+ fugly code</description>
+    </item>
+    
+    <item>
+      <title>Calendar</title>
+      <link>https://reece.github.io/page/calendar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/page/calendar/</guid>
+      <description> </description>
+    </item>
+    
+  </channel>
+</rss>

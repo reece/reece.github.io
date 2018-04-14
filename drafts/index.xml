@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Drafts on Reece Hart</title>
+    <link>https://reece.github.io/drafts/</link>
+    <description>Recent content in Drafts on Reece Hart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Aug 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://reece.github.io/drafts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Open Source Licensing</title>
+      <link>https://reece.github.io/drafts/open-source-licensing/</link>
+      <pubDate>Sat, 13 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/drafts/open-source-licensing/</guid>
+      <description>| What I want: | - contributions | - patents
+https://admin.devis.com/rawmedia\_repository/3fc5697d\_4910\_4753\_97d8\_a27ebb2ca4f6
+| http://news.cnet.com/8301-13505\_3-10229817-16.html | http://blogs.zdnet.com/Burnette/?p=192
+| GPL encourages sharing at the expense of audience | Apache is attractive to a larger audience at the expense of ?
+Altruism
+| If you love ideas, set them free. | If you don&amp;rsquo;t get ideas back, strap people down and extract forcibly.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://reece.github.io/drafts/coalesce-for-python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/drafts/coalesce-for-python/</guid>
+      <description>The case of the missing values: SQL&amp;rsquo;s coalesce function for Python  date 2012-01-17 20:11
+ author reece
+ category Computing, Databases, Python
+ slug 471
+ status draft
+  Dealing with potentially missing values is annoying, especially when analyzing sparse data whose structure and completeness is unknown. It&amp;rsquo;s typically impossible to guess which data might be missing. A set of test data might be missing different values that those in another data set, which is to say that you&amp;rsquo;ll succeed on tests and fail in production.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://reece.github.io/drafts/openapi-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/drafts/openapi-notes/</guid>
+      <description> models should be shared by client and server =&amp;gt; one model base (and part of that flow) defined the use cycle/pattern &amp;ndash; it&amp;rsquo;s not linear clarity about what&amp;rsquo;s really supported: xml? better quality models json-schema and json-api  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://reece.github.io/drafts/python-serialization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/drafts/python-serialization/</guid>
+      <description>http://swagger.io/open-source-integrations/
+pyswagger
+bravado
+connexion
+ bravado  connexion petstore doesn&amp;rsquo;t work with bravado http response codes expected to be quoted</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://reece.github.io/drafts/serialization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/drafts/serialization/</guid>
+      <description>protobuf swagger capnproto msgpack
+=&amp;gt; whoa. backup: what do I want?
+figure client, server, models, conceptual models =&amp;gt; code and serializations multi serializations in json, xml, pb, msgpack, etc validation reasonable code
+federated sources NOT single-source! so passe!
+model -&amp;gt; {doc,lang models,db models,wire models} + codegen
+ clear usage modes/models iterative builds
+ swagger
+ no enums
+ annoyance bugs and gap between suggested features and real-world protobuf
+ fugly code</description>
+    </item>
+    
+  </channel>
+</rss>

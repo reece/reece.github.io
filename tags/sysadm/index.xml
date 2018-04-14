@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sysadm on Reece Hart</title>
+    <link>https://reece.github.io/tags/sysadm/</link>
+    <description>Recent content in Sysadm on Reece Hart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Feb 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://reece.github.io/tags/sysadm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Monitor your router with (r)syslogd</title>
+      <link>https://reece.github.io/2011/02/12/monitor-your-router-with-rsyslogd/</link>
+      <pubDate>Sat, 12 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/2011/02/12/monitor-your-router-with-rsyslogd/</guid>
+      <description>I&amp;rsquo;m having lots of dropped connections at home. Unfortunately, consumer-grade routers typically have poor monitoring facilities out of the box. Unix/Linux environments have long been able to aggregate logging messages across multiple hosts through a service called syslog. Many routers use embedded Linux and support sending messages to remote systems via syslog. (Emailing logs is supported, but that&amp;rsquo;s a clumsy option.) This post is a short tip on how to configure a D-Link DI-825 (rev B1) to send system messages to an Ubuntu 10.</description>
+    </item>
+    
+  </channel>
+</rss>

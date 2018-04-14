@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Reece Hart</title>
+    <link>https://reece.github.io/tags/python/</link>
+    <description>Recent content in Python on Reece Hart</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Jul 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://reece.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using virtualenv, pip, and ipython</title>
+      <link>https://reece.github.io/2011/07/03/using-virtualenv-pip-and-ipython/</link>
+      <pubDate>Sun, 03 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://reece.github.io/2011/07/03/using-virtualenv-pip-and-ipython/</guid>
+      <description>This page provides a quick synopsis on how to use three of my favorite Python features together:
+ virtualenv, which provides a standardized mechanism to isolate python environments (including in WSGI setups) pip &amp;lt;http://www.pip-installer.org/&amp;gt;__, which facilitates packages installation in virtualenv environments or otherwise ipython &amp;lt;http://ipython.scipy.org/&amp;gt;__, a terrific interactive shell with readline and debugging support  First, you&amp;rsquo;ll need python, virtualenv, and ipython installed. These are commonly available in most (all?) Linux distributions, or you can install from source.</description>
+    </item>
+    
+  </channel>
+</rss>
