@@ -1,7 +1,6 @@
 DefaultContentLanguage: en
-baseurl: https://example.com/
-copyright: "Copyright \xA9 2008\u20132018, Steve Francia and the Hugo Authors; all\
-  \ rights reserved."
+baseurl: https://reece.github.io
+copyright: '2021, Reece Hart <reecehart@gmail.com>'
 disqusShortname: ''
 paginate: 10
 taxonomies:

@@ -1,5 +1,5 @@
 author:
-  name: Jane Doe
+  name: Reece Hart
 centerLogo: false
 codeLineNumbers: false
 codeMaxLines: 7
@@ -10,22 +10,21 @@ figurePositionLabel: Figure
 figurePositionShow: false
 ga_analytics: XXXXXXXXXX
 iconsDir: icons/
-introDescription: Technologist, perpetual student, teacher, continual incremental
-  improvement.
+introDescription: 'husband / dad / community agent / scientist + engineer'
 languageMenuName: "\U0001F310"
 largeTwitterCard: false
 logo: logos/logo.png
 mainSections:
 - post
-matomo_analytics:
-  enable: false
-  matomoDomain: matomo.example.com
-  matomoSiteID: '1'
-  websiteDomain: example.com
+# matomo_analytics:
+#   enable: false
+#   matomoDomain: matomo.example.com
+#   matomoSiteID: '1'
+#   websiteDomain: example.com
 mobileNavigation: left
 numberOfTagsShown: 14
 plausible_analytics:
   enable: false
   websiteDomain: example.com
-twitter: '@janedoe'
+twitter: '@reecehart'
 
