@@ -8,4 +8,4 @@ taxonomies:
   series: series
   tag: tags
 theme: hugo-clarity
-
+publishDir: docs
