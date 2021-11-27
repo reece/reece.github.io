@@ -22,7 +22,7 @@ What's not discussed in the documentation is how to inherit methods
 post.
 
 Let's start with the examples from the docs. The first example is:
-```
+```python
 Point = collections.namedtuple('Point', ['x', 'y'])
 p = Point(5,6)
 ```
@@ -36,7 +36,7 @@ often prefer to put the code for such manipulations with the class than
 as standalone functions. With namedtuples, that might look like this
 (again, from the docs):
 
-```
+```python
 class Point(namedtuple('Point', 'x y')):
     __slots__ = ()
     @property
@@ -50,7 +50,7 @@ Great, we now have methods associated with the class.
 
 The docs go on to define Point3D with an additional dimension:
 
-```
+```python
 Point3D = namedtuple('Point3D', Point._fields + ('z',))
 ```
 
