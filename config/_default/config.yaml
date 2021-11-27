@@ -1,0 +1,12 @@
+DefaultContentLanguage: en
+baseurl: https://example.com/
+copyright: "Copyright \xA9 2008\u20132018, Steve Francia and the Hugo Authors; all\
+  \ rights reserved."
+disqusShortname: ''
+paginate: 10
+taxonomies:
+  category: categories
+  series: series
+  tag: tags
+theme: hugo-clarity
+
