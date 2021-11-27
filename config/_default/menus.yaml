@@ -2,9 +2,9 @@ main:
 - name: Home
   url: ''
   weight: -110
-- name: Archives
-  url: post/rich-content/
-  weight: -109
+#- name: Archives
+#  url: post/rich-content/
+#  weight: -109
 
 # - identifier: Links
 #   name: Links

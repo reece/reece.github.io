@@ -13,7 +13,7 @@ iconsDir: icons/
 introDescription: 'husband / dad / community agent / scientist + engineer'
 languageMenuName: "\U0001F310"
 largeTwitterCard: false
-logo: logos/logo.png
+# logo: logos/logo.png
 mainSections:
 - post
 # matomo_analytics:
@@ -27,4 +27,3 @@ plausible_analytics:
   enable: false
   websiteDomain: example.com
 twitter: '@reecehart'
-
