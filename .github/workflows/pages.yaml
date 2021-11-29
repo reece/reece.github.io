@@ -3,7 +3,7 @@ name: hugo publish
 on:
   push:
     branches:
-    - master
+      - main
 
 jobs:
   build-deploy:
@@ -25,8 +25,8 @@ jobs:
       uses: peaceiris/actions-gh-pages@v2
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        EXTERNAL_REPOSITORY: username/external-repository
-        PUBLISH_BRANCH: master
+        EXTERNAL_REPOSITORY: reece/reece.github.io
+        PUBLISH_BRANCH: main
         PUBLISH_DIR: ./public
       with:
         emptyCommits: false
