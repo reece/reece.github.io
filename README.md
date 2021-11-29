@@ -43,3 +43,10 @@ cd ..
 git submodule add git@github.com:reece/reece.github.io.git public
 git com -m "added github pages repo at public/" public
 ```
+
+
+# Links
+
+* https://medium.com/@asishrs/automate-your-github-pages-deployment-using-hugo-and-actions-518b959a51f9
+
+* https://gohugo.io/hosting-and-deployment/hosting-on-github/
