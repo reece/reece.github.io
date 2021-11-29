@@ -40,8 +40,6 @@ touch .nojekyll
 git com -am "add .nojekyll" 
 git push
 cd ..
-git submodule add git@github.com:reece/reece.github.io.git public
-git com -m "added github pages repo at public/" public
 ```
 
 
