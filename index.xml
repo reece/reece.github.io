@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title/><link>https://reece.github.io/</link><description>Recent content on</description><generator>Hugo -- gohugo.io</generator><copyright>2021, Reece Hart &lt;reecehart@gmail.com></copyright><lastBuildDate>Sun, 02 Jun 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://reece.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Using namedtuples with method and instance variable inheritance</title><link>https://reece.github.io/post/using-namedtuples-with-method-and-instance-variable-inheritance/</link><pubDate>Sun, 02 Jun 2013 00:00:00 +0000</pubDate><guid>https://reece.github.io/post/using-namedtuples-with-method-and-instance-variable-inheritance/</guid><description>
+&lt;p>Python's namedtuple class provides a simple, lightweight way to make
+simple immutable classes. If you're using dictionaries to pass objects
+around, consider using namedtuples instead: they're easier to read and
+provide the benefits of classes such as methods and properties. With
+namedtuples, you'll have cleaner code with essentially no additional
+work.&lt;/p>
+&lt;p>The &lt;a href="http://docs.python.org/2/library/collections.html#collections.namedtuple">Python namedtuple
+docs&lt;/a> include
+examples for Point and Point3D. Point3D inherits the instance variables
+(&amp;quot;fields&amp;quot; in namedtuples), but not the methods of the Point class.
+What's not discussed in the documentation is how to inherit methods
+&lt;strong>and&lt;/strong> fields when using namedtuples, and that's the subject of this
+post.&lt;/p>
+&lt;p>Let's start with the examples from the docs. The first example is:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="ln">1&lt;/span>&lt;span class="n">Point&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">collections&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">namedtuple&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Point&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;x&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;y&amp;#39;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="ln">2&lt;/span>&lt;span class="n">p&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Point&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">6&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>This is quite useful in itself because it allows us to access p.x and
+p.y as properties, which many find to be preferable to p['x'] or
+p['y'] with a dict-based structure.&lt;/p>
+&lt;p>But Points often need to be manipulated, and object-oriented programmers
+often prefer to put the code for such manipulations with the class than
+as standalone functions. With namedtuples, that might look like this
+(again, from the docs):&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="ln">1&lt;/span>&lt;span class="k">class&lt;/span> &lt;span class="nc">Point&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">namedtuple&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Point&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;x y&amp;#39;&lt;/span>&lt;span class="p">)):&lt;/span>
+&lt;span class="ln">2&lt;/span> &lt;span class="vm">__slots__&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">()&lt;/span>
+&lt;span class="ln">3&lt;/span> &lt;span class="nd">@property&lt;/span>
+&lt;span class="ln">4&lt;/span> &lt;span class="k">def&lt;/span> &lt;span class="nf">hypot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="ln">5&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">**&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">y&lt;/span> &lt;span class="o">**&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">**&lt;/span> &lt;span class="mf">0.5&lt;/span>
+&lt;span class="ln">6&lt;/span> &lt;span class="k">def&lt;/span> &lt;span class="fm">__str__&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="ln">7&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="s1">&amp;#39;Point: x=&lt;/span>&lt;span class="si">%6.3f&lt;/span>&lt;span class="s1"> y=&lt;/span>&lt;span class="si">%6.3f&lt;/span>&lt;span class="s1"> hypot=&lt;/span>&lt;span class="si">%6.3f&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">hypot&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Great, we now have methods associated with the class.&lt;/p>
+&lt;p>The docs go on to define Point3D with an additional dimension:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="ln">1&lt;/span>&lt;span class="n">Point3D&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">namedtuple&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Point3D&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Point&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">_fields&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;z&amp;#39;&lt;/span>&lt;span class="p">,))&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Although Point3D &amp;quot;inherits&amp;quot; fields from Point, it doesn't inherit any
+methods. In fact, Point3D isn't a subclass of Point at all. In the
+example above, we merely copied one aspect of the definition of Point to
+make Point3D. So, if there were methods in Point, they would not be
+available to Point3D. In the real world, method inheritance is useful
+for abstraction and code maintenance.&lt;/p>
+&lt;p>Like all classes, classes derived from namedtuples may be subclassed and
+their methods overridden. Consider an imaginary number class like this
+that formats imaginary numbers in typical a + bi notation.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="ln">1&lt;/span>class Point\_img(Point):
+&lt;span class="ln">2&lt;/span> def __str__(self):
+&lt;span class="ln">3&lt;/span> return &amp;#39;Point: %6.3f+%6.3fi&amp;#39; % (self.x, self.y)
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>So, it's now time to combine class inheritance and extending a
+namedtuple's fields. Let's define a new Point2D and Point3D classes like
+this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="ln"> 1&lt;/span>from collections import namedtuple
+&lt;span class="ln"> 2&lt;/span>class Point2D(namedtuple(&amp;#39;Point&amp;#39;, [&amp;#39;x&amp;#39;, &amp;#39;y&amp;#39;])):
+&lt;span class="ln"> 3&lt;/span> @property
+&lt;span class="ln"> 4&lt;/span> def length(self):
+&lt;span class="ln"> 5&lt;/span> return sum([ d**2 for d in self ]) ** 0.5
+&lt;span class="ln"> 6&lt;/span> def __add__(self,other):
+&lt;span class="ln"> 7&lt;/span> assert self.__class__ == other.__class__, &amp;#34;may only add instances of same class&amp;#34;
+&lt;span class="ln"> 8&lt;/span> return self.__class__.__new__(self.__class__,*[ d1+d2 for d1,d2 in zip(self,other) ])
+&lt;span class="ln"> 9&lt;/span> def __str__(self):
+&lt;span class="ln">10&lt;/span> return &amp;#39;%s: &amp;amp;lt;%s&amp;amp;gt;; length=%6.3f&amp;#39; % (self.__class__.__name__,
+&lt;span class="ln">11&lt;/span>&amp;#39;,&amp;#39;.join([ &amp;#39;%s=%6.3f&amp;#39; % (d,v)
+&lt;span class="ln">12&lt;/span>for d,v in zip(self._fields,self) ]),
+&lt;span class="ln">13&lt;/span>self.length)
+&lt;span class="ln">14&lt;/span>class Point3D(namedtuple(&amp;#39;Point3D&amp;#39;, Point2D._fields + (&amp;#39;z&amp;#39;,)),
+&lt;span class="ln">15&lt;/span>Point2D):
+&lt;span class="ln">16&lt;/span>pass
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Notice that Point3D is derived from two classes: a namedtuple-based
+class defined by adding to _fields, and the Point2D class which defined
+methods (and was itself derived from a namedtuple). This isn't rocket
+science, but it's a obscure and potentially very useful to others.&lt;/p>
+&lt;p>With these definitions, we may now define 2D and 3D points. Notice that
+Point3D inherits the addition and string representation methods of
+Point2D.&lt;/p>
+&lt;p>| [python]
+| In [21]: print Point2D(3,4)
+| Point2D: &amp;lt;x= 3.000,y= 4.000&amp;gt;; length= 5.000&lt;/p>
+&lt;p>| In [22]: print Point2D(3,4) + Point2D(5,6)
+| Point2D: &amp;lt;x= 8.000,y=10.000&amp;gt;; length=12.806&lt;/p>
+&lt;p>| In [23]: print Point3D(3,4,5)
+| Point3D: &amp;lt;x= 3.000,y= 4.000,z= 5.000&amp;gt;; length= 7.071&lt;/p>
+&lt;p>| In [24]: print Point3D(3,4,5) + Point3D(1,2,3)
+| Point3D: &amp;lt;x= 4.000,y= 6.000,z= 8.000&amp;gt;; length=10.770
+| [/python]&lt;/p>
+&lt;p>Finally, it's worth noting that designing the notion that Point3D is-a
+Point2D is dubious. If I were going to implement this, I'd probably
+start with a generic n-dimensional point that had the methods described
+above, and then subclass special cases like Point2D and Point3D as
+needed.&lt;/p></description></item></channel></rss>
