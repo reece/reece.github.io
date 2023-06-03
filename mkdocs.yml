@@ -4,16 +4,19 @@
 
 site_name: Reece's Blog
 use_directory_urls: true
-strict: true
+#strict: true
 
 plugins:
   - autolinks
   - awesome-pages
   - blogging:
-      dirs:
-        - blog
+      dirs: [.]
       size: 5
       paging: false
+      features:
+        tags:
+          index_page: tags.md
+
   #- mermaid2
   - glightbox
   - search
@@ -76,4 +79,4 @@ theme:
     text: Ubuntu
     code: Roboto Mono
   #logo: images/logo.svg
-  #favicon: images/logo.png
+  favicon: static/favicon.ico
