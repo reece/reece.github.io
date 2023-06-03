@@ -1,0 +1,79 @@
+# See https://squidfunk.github.io/mkdocs-material/
+# https://www.mkdocs.org/user-guide/deploying-your-docs/#organization-and-user-pages
+# https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins
+
+site_name: Reece's Blog
+use_directory_urls: true
+strict: true
+
+plugins:
+  - autolinks
+  - awesome-pages
+  - blogging:
+      dirs:
+        - blog
+      size: 5
+      paging: false
+  #- mermaid2
+  - glightbox
+  - search
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - toc:
+      toc_depth: 2
+      permalink: "#"
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/biocommons
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/biocommons_ann
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+
+  features:
+    - navigation.indexes
+    - navigation.instant
+    #- navigation.tabs.sticky
+    - navigation.expand
+    - navigation.tracking
+    # - navigation.sections
+    - search.highlight
+    - toc.follow
+    - toc.integrate
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Ubuntu
+    code: Roboto Mono
+  #logo: images/logo.svg
+  #favicon: images/logo.png
