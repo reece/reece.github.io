@@ -2,7 +2,7 @@
 # https://www.mkdocs.org/user-guide/deploying-your-docs/#organization-and-user-pages
 # https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins
 
-site_name: Reece's Blog
+site_name: Reece Hart
 use_directory_urls: true
 #strict: true
 
@@ -33,15 +33,15 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - toc:
-      toc_depth: 2
+      toc_depth: 1
       permalink: "#"
 
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/biocommons
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/biocommons_ann
+      link: https://github.com/reece
+#    - icon: fontawesome/brands/twitter
+#      link: https://twitter.com/biocommons_ann
 
 extra_css:
   - stylesheets/extra.css
@@ -55,28 +55,27 @@ theme:
     #- navigation.tabs.sticky
     - navigation.expand
     - navigation.tracking
-    # - navigation.sections
+    - navigation.sections
     - search.highlight
     - toc.follow
-    - toc.integrate
+    # - toc.integrate
 
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: teal
+      accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: teal
+      primary: amber
+      accent: deep orange
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
   font:
     text: Ubuntu
     code: Roboto Mono
-  #logo: images/logo.svg
-  favicon: static/favicon.ico
+  logo: static/R.ico
+  favicon: static/R.ico
